@@ -1,0 +1,46 @@
+body {
+    background-color: #63afb5;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.form-group {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.form-control {
+    margin: 20px 0px;
+}
+
+button {
+    background-color: #326D70;
+    color: white;
+    width: 150px;
+
+}
+
+#comment-list {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 300px;
+    width: 500px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+}

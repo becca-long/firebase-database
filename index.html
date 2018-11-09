@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <h1>The Comment Section</h1>
+    <div class="form-group">
+        <label for="commentSection">Leave a comment here:</label>
+        <br>
+        <textarea class="form-control" id="commentText" rows="3"></textarea>
+        <button>Submit</button>
+    </div>
+
+    <br>
+
+    <div id="comment-list">
+        <h5>User comments will go here:</h5>
+        <div id="comments"></div>
+    </div>
+
+    <h1 id="bigOne"></h1>
+
+   
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAA6vZBgbd8SKS-qxzMZNByazd2UjyxJj4",
+    authDomain: "comments-section-2cc98.firebaseapp.com",
+    databaseURL: "https://comments-section-2cc98.firebaseio.com",
+    projectId: "comments-section-2cc98",
+    storageBucket: "comments-section-2cc98.appspot.com",
+    messagingSenderId: "746729496360"
+  };
+  firebase.initializeApp(config);
+
+  var comments = document.getElementById('comments')
+  var dbRef = firebase.database().ref().child('text')
+  dbRef.on('value', snap => comments.innerText = snap.val())
+</script>
+	<script src="index.js"></script>
+
+</body>
+</html>
